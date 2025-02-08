@@ -1,27 +1,43 @@
 @startuml
-
 class Biblioteca {
-    - String name
+    - String nombre
     - ArrayList<Libro> libros
-    + Biblioteca(String)
-    + void addLibro(Libro)
-    + void deleteLibro(String)
+    + Biblioteca(String nombre)
+    + void addLibro(Libro libro)
+    + void deleteLibro(String titulo)
     + ArrayList<Libro> getLibros()
-    + String getName()
+    + String getNombre()
 }
 
 class Libro {
     - String titulo
-    - String autor
+    - Persona autor
     - String editorial
     - String isbn
-    - int year
-    + Libro(String, String, String, String, int)
+    - int anio
+    + Libro(String titulo, Persona autor, String editorial, String isbn, int anio)
     + String getTitulo()
     + String toString()
-    + int compareTo(Libro)
+    + int compareTo(Libro otro)
 }
 
-Biblioteca "1" -- "*" Libro : contiene >
+class Persona {
+    - String nombre
+    - String apellido
+    - Fecha fechaNacimiento
+    + Persona(String nombre, String apellido, Fecha fechaNacimiento)
+    + String toString()
+}
 
+class Fecha {
+    - int dia
+    - int mes
+    - int anio
+    + Fecha(int dia, int mes, int anio)
+    + String toString()
+}
+
+Biblioteca "1" *-- "many" Libro
+Libro "1" *-- "1" Persona
+Persona "1" *-- "1" Fecha
 @enduml

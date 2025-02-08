@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Biblioteca {
-    private String name;
+    private String nombre;
     private ArrayList<Libro> libros;
 
-    public Biblioteca(String name) {
-        this.name = name;
+    public Biblioteca(String nombre) {
+        this.nombre = nombre;
         this.libros = new ArrayList<>();
     }
 
@@ -18,14 +18,14 @@ public class Biblioteca {
     }
 
     public void deleteLibro(String titulo) {
-        libros.removeIf(libro -> libro.getTitulo().equals(titulo));
+        libros.removeIf(libro -> libro.getTitulo().equalsIgnoreCase(titulo));
     }
 
     public ArrayList<Libro> getLibros() {
         return libros;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 }

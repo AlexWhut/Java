@@ -1,0 +1,16 @@
+@startuml
+class Tarjeta {
+    - int numeroCuenta
+    - double saldo
+    - int numeroSecreto
+    - double maxDiario
+
+    + Tarjeta(int, double, int, double)
+    + double getSaldo()
+    + String ingresarDinero(double)
+    + boolean comprobarPin(int)
+    + String sacarDinero(double)
+    + void setMaxDiario(double)
+    + int getNumeroCuenta()
+}
+@enduml
