@@ -1,0 +1,19 @@
+@startuml
+
+class Calculator {
+    - float num
+    - float acum
+    - char simbol
+    - Scanner input
+    + Calculator(float, float)
+    + void setNumFromInput()
+    + void setSimbol(char)
+    + void resetCalculator()
+    + void startCalculator()
+    + void suma()
+    + void resta()
+    + void multiplicar()
+    + void dividir()
+}
+
+@enduml

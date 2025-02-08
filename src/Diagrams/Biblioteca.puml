@@ -1,0 +1,27 @@
+@startuml
+
+class Biblioteca {
+    - String name
+    - ArrayList<Libro> libros
+    + Biblioteca(String)
+    + void addLibro(Libro)
+    + void deleteLibro(String)
+    + ArrayList<Libro> getLibros()
+    + String getName()
+}
+
+class Libro {
+    - String titulo
+    - String autor
+    - String editorial
+    - String isbn
+    - int year
+    + Libro(String, String, String, String, int)
+    + String getTitulo()
+    + String toString()
+    + int compareTo(Libro)
+}
+
+Biblioteca "1" -- "*" Libro : contiene >
+
+@enduml

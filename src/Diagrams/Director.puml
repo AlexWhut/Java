@@ -1,0 +1,22 @@
+@startuml
+
+class Director {
+    - String nombre
+    - String pais
+    - int año
+    + Director(String, String, int)
+    + String toString()
+}
+
+class Pelicula {
+    - String titulo
+    - int año
+    - Director director
+    + Pelicula(String, int, Director)
+    + String toString()
+    + void impresion()
+}
+
+Pelicula "1" -- "1" Director : tiene
+
+@enduml

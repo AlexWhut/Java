@@ -1,0 +1,14 @@
+@startuml
+
+class Contador {
+    - int valor
+    + Contador()
+    + void incrementar()
+    + void incrementar(int)
+    + void decrementar()
+    + void decrementar(int)
+    + void reiniciar()
+    + int getValor()
+}
+
+@enduml

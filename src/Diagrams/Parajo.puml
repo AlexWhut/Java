@@ -1,0 +1,14 @@
+@startuml
+
+class Pajaro {
+    - int edad
+    - int ID
+    - String pais
+    - String color
+    - static int contadorPajaros
+    + Pajaro(int, String, String)
+    - int generarID()
+    + String toString()
+}
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+class Alarma {
+    - LocalTime horaAlarma
+    - boolean activa
+    + Alarma(LocalTime)
+    + void setHoraAlarma(LocalTime)
+    + void activar()
+    + void desactivar()
+    + boolean isActiva()
+    + LocalTime getHoraAlarma()
+}
+
+class Reloj {
+    - LocalTime horaActual
+    - List<Alarma> alarmas
+    + Reloj()
+    + void setHora(LocalTime)
+    + LocalTime getHora()
+    + void añadirAlarma(Alarma)
+    + void comprobarAlarmas()
+    + void avanzarHora(int)
+}
+
+Reloj "1" -- "*" Alarma : contiene >
+
+@enduml

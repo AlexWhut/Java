@@ -1,0 +1,131 @@
+@startuml
+
+package "POO.Basicos.BasicoUno" {
+    class BasicFigura {
+        - float altura
+        - float base
+        - float area
+        - float perimetro
+        + BasicFigura(float altura, float base)
+        + String toString()
+        + float area()
+        + float perimetro()
+    }
+}
+
+package "POO.Basicos.BasicoDos" {
+    class BasicFecha {
+        - int dia
+        - int mes
+        - int anno
+        + BasicFecha()
+        + BasicFecha(int dia, int mes, int anno)
+        + int getDia()
+        + void setDia(int dia)
+        + int getMes()
+        + void setMes(int mes)
+        + int getAnno()
+        + void setAnno(int anno)
+        + String toString()
+        + boolean equals(Object obj)
+        - boolean esFechaValida(int dia, int mes, int anno)
+        - boolean esBisiesto(int anno)
+    }
+}
+
+package "POO.Basicos.BasicoTres" {
+    class BasicTres {
+        - int hora
+        - int minuto
+        - int segundo
+        + BasicTres(int hora, int minuto, int segundo)
+        + BasicTres(int hora, int minuto)
+        + BasicTres(int hora)
+        + int getHora()
+        + void setHora(int hora)
+        + int getMinuto()
+        + void setMinuto(int minuto)
+        + int getSegundo()
+        + void setSegundo(int segundo)
+        - boolean esHoraValida(int hora, int minuto, int segundo)
+        + String toString()
+    }
+}
+
+package "POO.Basicos.BasicoCuatro" {
+    class BasicCancion {
+        - String titulo
+        - String autor
+        + BasicCancion(String titulo, String autor)
+        + BasicCancion()
+        + String getTitulo()
+        + void setTitulo(String titulo)
+        + String getAutor()
+        + void setAutor(String autor)
+        + String toString()
+    }
+}
+
+package "POO.Basicos.BasicoCinco" {
+    class Fecha {
+        - int dia
+        - int mes
+        - int anno
+        + Fecha()
+        + Fecha(int dia, int mes, int anno)
+        + int getDia()
+        + int getMes()
+        + int getAnno()
+        + void setDia(int dia)
+        + void setMes(int mes)
+        + void setAnno(int anno)
+        - boolean esFechaValida(int dia, int mes, int anno)
+        - boolean esBisiesto(int anno)
+        + String toString()
+    }
+
+    class Persona {
+        - String nombre
+        - String apellido
+        + Persona(String nombre, String apellido)
+        + String getNombre()
+        + void setNombre(String nombre)
+        + String getApellido()
+        + void setApellido(String apellido)
+        + String toString()
+    }
+
+    class Libro {
+        - String titulo
+        - Persona autor
+        - String ISBN
+        - int paginas
+        - int edicion
+        - String editorial
+        - String ciudad
+        - String pais
+        - Fecha fechaEdicion
+        + Libro(String titulo, Persona autor, String ISBN, int paginas, int edicion, String editorial, String ciudad, String pais, Fecha fechaEdicion)
+        + String getTitulo()
+        + void setTitulo(String titulo)
+        + Persona getAutor()
+        + void setAutor(Persona autor)
+        + String getISBN()
+        + void setISBN(String ISBN)
+        + int getPaginas()
+        + void setPaginas(int paginas)
+        + int getEdicion()
+        + void setEdicion(int edicion)
+        + String getEditorial()
+        + void setEditorial(String editorial)
+        + String getCiudad()
+        + void setCiudad(String ciudad)
+        + String getPais()
+        + void setPais(String pais)
+        + Fecha getFechaEdicion()
+        + void setFechaEdicion(Fecha fechaEdicion)
+        + void mostrarInformacion()
+    }
+}
+
+@enduml
