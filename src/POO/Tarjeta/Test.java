@@ -1,4 +1,5 @@
 package POO.Tarjeta;
+
 import java.util.Scanner;
 
 public class Test {
@@ -23,12 +24,12 @@ public class Test {
             // Intentar sacar dinero
             System.out.print("¿Cuánto deseas retirar? ");
             double cantidad = scanner.nextDouble();
-            miTarjeta.sacarDinero(cantidad);
+            System.out.println(miTarjeta.sacarDinero(cantidad));
 
             // Intentar ingresar dinero
             System.out.print("¿Cuánto deseas ingresar? ");
             double ingreso = scanner.nextDouble();
-            miTarjeta.ingresarDinero(ingreso);
+            System.out.println(miTarjeta.ingresarDinero(ingreso));
 
             // Mostrar saldo final
             System.out.println("Saldo final: " + miTarjeta.getSaldo() + " €");

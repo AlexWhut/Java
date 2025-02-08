@@ -20,12 +20,12 @@ public class Tarjeta {
     }
 
     // Método para ingresar dinero
-    public void ingresarDinero(double cantidad) {
+    public String ingresarDinero(double cantidad) {
         if (cantidad > 0) {
             saldo += cantidad;
-            System.out.println("Ingreso exitoso. Nuevo saldo: " + saldo + " €");
+            return "Ingreso exitoso. Nuevo saldo: " + saldo + " €";
         } else {
-            System.out.println("Cantidad inválida.");
+            return "Cantidad inválida.";
         }
     }
 
@@ -35,25 +35,23 @@ public class Tarjeta {
     }
 
     // Método para sacar dinero
-    public void sacarDinero(double cantidad) {
+    public String sacarDinero(double cantidad) {
         if (cantidad > maxDiario) {
-            System.out.println("Error: No puedes sacar más de " + maxDiario + " € por día.");
+            return "Error: No puedes sacar más de " + maxDiario + " € por día.";
         } else if (saldo - cantidad < 200) {
-            System.out.println("Error: No puedes retirar esa cantidad. El saldo mínimo permitido es 200 €.");
+            return "Error: No puedes retirar esa cantidad. El saldo mínimo permitido es 200 €.";
         } else {
             saldo -= cantidad;
-            System.out.println("Retiro exitoso. Nuevo saldo: " + saldo + " €");
+            return "Retiro exitoso. Nuevo saldo: " + saldo + " €";
         }
     }
 
     // Método para modificar el límite máximo diario
     public void setMaxDiario(double maxDiario) {
         this.maxDiario = maxDiario;
-        System.out.println("Límite de retiro diario actualizado a " + maxDiario + " €");
     }
 
     public int getNumeroCuenta() {
         return numeroCuenta;
     }
-    
 }
