@@ -7,7 +7,7 @@ public class Test {
         para calcular el área y el perímetro. Crear otra clase PruebaRectangulo 
         que pruebe varios rectángulos y muestre por pantalla sus áreas y perímetros. */
        
-        BasicFigura rectangulo1 = new BasicFigura(15, 2);
+    BasicFigura rectangulo1 = new BasicFigura(15, 2);
 		BasicFigura rectangulo2 = new BasicFigura(2, 2);
 		BasicFigura rectangulo3 = new BasicFigura(1, 4);
 		
