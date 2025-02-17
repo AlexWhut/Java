@@ -7,9 +7,9 @@ public class Test {
         para calcular el área y el perímetro. Crear otra clase PruebaRectangulo 
         que pruebe varios rectángulos y muestre por pantalla sus áreas y perímetros. */
        
-        BasicFigura rectangulo1 = new BasicFigura(15, 2);
-		BasicFigura rectangulo2 = new BasicFigura(2, 2);
-		BasicFigura rectangulo3 = new BasicFigura(1, 4);
+    Figura rectangulo1 = new Figura(15, 2);
+		Figura rectangulo2 = new Figura(2, 2);
+		Figura rectangulo3 = new Figura(1, 4);
 		
 		System.out.println("1: " + rectangulo1);
 		System.out.println("2: " + rectangulo2);

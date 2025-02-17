@@ -1,10 +1,10 @@
 package POO.Basicos.BasicoUno;
 
-public class BasicFigura {
+public class Figura {
     private float altura, base, area, perimetro;
 	
 	//constructor
-	public BasicFigura(float altura, float base) {
+	public Figura(float altura, float base) {
 		this.altura = altura;
 		this.base = base;
 		this.area = area();
@@ -16,11 +16,11 @@ public class BasicFigura {
     public String toString() {
         return "Datos del rectangulo[altura: " + altura + "  Base: "+ base + " area: "+ area + " perimetro: "+ perimetro +"]";
     }
-	
-    
+
     public float area() {
     	return this.altura * this.base;	
     }
+
     public float perimetro() {
     	return (2*this.altura) + (2*this.base);	
     }
