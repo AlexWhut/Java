@@ -1,29 +1,23 @@
 package POO.Basicos.BasicoUno;
 
-public class Figura {
-    private float altura, base, area, perimetro;
+public abstract class Figura {
+    protected float altura;
+    protected float base;
+
 	
 	//constructor
 	public Figura(float altura, float base) {
 		this.altura = altura;
 		this.base = base;
-		this.area = area();
-		this.perimetro = perimetro();
 	}
 	
-	
+	public abstract float area();
+	public abstract float perimetro();
+
+
     @Override
     public String toString() {
-        return "Datos del rectangulo[altura: " + altura + "  Base: "+ base + " area: "+ area + " perimetro: "+ perimetro +"]";
+        return "Figura sin datos";
     }
 
-    public float area() {
-    	return this.altura * this.base;	
-    }
-
-    public float perimetro() {
-    	return (2*this.altura) + (2*this.base);	
-    }
-
-	
 }
