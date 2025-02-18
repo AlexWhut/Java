@@ -1,13 +1,13 @@
 package POO.Cuentas;
 
-public class Cuentas {
+public class Account {
     
     //Tarjeta
     private int num;
     private int code;
-    private int fechaV;
+    private int type;
 
-    Cuentas(int num, int code, int fechaV){
+    Account (int num, int code, int type){
 
     }
 
