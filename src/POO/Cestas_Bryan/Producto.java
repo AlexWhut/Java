@@ -2,10 +2,10 @@ package POO.Cestas_Bryan;
 
 public class Producto implements Comparable<Producto> {
 
-    int code;
-    String name;
-    double precio;
-    boolean gluten;
+    private int code;
+    private String name;
+    private double precio;
+    private boolean gluten;
 
     // Constructor, donde 0 es sin gluten (false) y 1 es con gluten (true)
     Producto(int code, String name, double precio, int gluten) {
