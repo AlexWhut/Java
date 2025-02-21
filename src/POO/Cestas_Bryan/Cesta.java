@@ -14,7 +14,7 @@ public class Cesta {
 
     public void addProducto(Producto producto) {
         productos.add(producto);
-        Collections.sort(productos); // Ahora funciona correctamente
+        Collections.sort(productos);
     }
 
     public void mostrarProductos() {
