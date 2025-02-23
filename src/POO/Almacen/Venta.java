@@ -3,24 +3,28 @@ import java.util.ArrayList;
 
 public class Venta  {
 
+    private static int contadorVentas = 1;
     private int codeVenta;
-    private ArrayList<Producto> prodVendidos = new ArrayList<>();
+    private ArrayList<Producto> prodVendidos;
 
-    public void addProducto(Producto p){
+    public Venta() {
+        this.codeVenta = contadorVentas++;
+        this.prodVendidos = new ArrayList<>();
+    }
+
+    public void addProducto(Producto p) {
         prodVendidos.add(p);
     }
 
     @Override
     public String toString() {
-        return "Venta [codeVenta=" + codeVenta + ", prodVendidos=" + prodVendidos + ", toString()=" + super.toString()
-                + "]";
+        return "Venta [codeVenta=" + codeVenta + ", productos vendidos=" + prodVendidos + "]";
     }
 
-    // bucle para mostrar las ventas
-    public void mostrarVenta(){
-        for(Producto p : prodVendidos){
-            p.toString();
+    public void mostrarVenta() {
+        System.out.println("Venta #" + codeVenta);
+        for (Producto p : prodVendidos) {
+            System.out.println(p);
         }
     }
-
 }
