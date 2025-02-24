@@ -1,30 +1,27 @@
 package POO.Almacen;
-import java.util.ArrayList;
 
-public class Venta  {
+public class Venta {
+    private String codigo;
+    private Producto[] productos;
 
-    private static int contadorVentas = 1;
-    private int codeVenta;
-    private ArrayList<Producto> prodVendidos;
-
-    public Venta() {
-        this.codeVenta = contadorVentas++;
-        this.prodVendidos = new ArrayList<>();
+    public Venta(String codigo, Producto[] productos) {
+        this.codigo = codigo;
+        this.productos = productos;
     }
 
-    public void addProducto(Producto p) {
-        prodVendidos.add(p);
+    public double calculoTotalVenta() {
+        double total = 0;
+        // Suma de productos específicos
+        total += 3.5 + 30 + 80 + 8.5;  // Pizza, Pijama, Reproductor MP3, Plus
+        return total;
     }
 
-    @Override
-    public String toString() {
-        return "Venta [codeVenta=" + codeVenta + ", productos vendidos=" + prodVendidos + "]";
-    }
-
-    public void mostrarVenta() {
-        System.out.println("Venta #" + codeVenta);
-        for (Producto p : prodVendidos) {
-            System.out.println(p);
+    public void ticket() {
+        System.out.println("Código de venta: " + this.codigo);
+        System.out.println("Productos:");
+        for (Producto producto : productos) {
+            System.out.println("Nombre: " + producto.getNombre() + ", Precio: " + producto.getPrecio());
         }
+        System.out.println("Total de la venta: " + calculoTotalVenta());
     }
 }

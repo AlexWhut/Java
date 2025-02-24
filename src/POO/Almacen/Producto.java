@@ -1,43 +1,25 @@
 package POO.Almacen;
 
 public class Producto {
-    
-    private String name;
-    private long codeBarra;
-    private double precio;
+    private String nombre;
+    private float precio;
+    private String codigo;
 
-    public Producto(String name, long codeBarra, double precio) {
-        this.name = name;
-        this.codeBarra = codeBarra;
+    public Producto(String nombre, float precio, String codigo) {
+        this.nombre = nombre;
         this.precio = precio;
+        this.codigo = codigo;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getCodeBarra() {
-        return codeBarra;
-    }
-
-    public void setCodeBarra(long codeBarra) {
-        this.codeBarra = codeBarra;
-    }
-
-    public double getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public String getCodigo() {
+        return codigo;
     }
-
-    @Override
-    public String toString() {
-        return "Producto [name=" + name + ", codeBarra=" + codeBarra + ", precio=" + precio + "]";
-    } 
 }

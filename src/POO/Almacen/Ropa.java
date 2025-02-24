@@ -1,16 +1,14 @@
 package POO.Almacen;
 
 public class Ropa extends Producto {
+    private String material;
 
-    private String color;
-
-    public Ropa(String name, long codeBarra, double precio, String color) {
-        super(name, codeBarra, precio);
-        this.color = color;
+    public Ropa(String nombre, float precio, String codigo, String material) {
+        super(nombre, precio, codigo);
+        this.material = material;
     }
 
-    @Override
-    public String toString() {
-        return "Ropa [color=" + color + ", name=" + getName() + ", codeBarra=" + getCodeBarra() + ", precio=" + getPrecio() + "]";
+    public String getMaterial() {
+        return material;
     }
 }
