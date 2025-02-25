@@ -34,5 +34,12 @@ public class Competencia {
             System.out.println(atleta);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Competencia [nombre=" + nombre + ", atletas=" + atletas + "]";
+    }
+
+    
 }
 
