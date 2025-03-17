@@ -3,7 +3,8 @@ package POOAbs.FigurasAbs;
 public class Cuadrado  extends Figura{
     private double lado;
 
-    public Cuadrado(double lado){
+    public Cuadrado(String name, double lado) {
+        super(name);
         this.lado = lado;
     }
 

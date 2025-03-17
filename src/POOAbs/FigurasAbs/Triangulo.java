@@ -7,13 +7,15 @@ public class Triangulo extends Figura {
     private double lado2;
     private double lado3;
 
-    public Triangulo(double base, double altura, double lado1, double lado2, double lado3) {
+    public Triangulo(String name, double base, double altura, double lado1, double lado2, double lado3) {
+        super(name);
         this.base = base;
         this.altura = altura;
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.lado3 = lado3;
     }
+
 
     @Override
     public double calcularArea(){
