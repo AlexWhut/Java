@@ -12,7 +12,7 @@ public abstract class Figura {
 
     @Override
     public String toString() {
-        return "Area> " + calcularArea() + "\n" + //
+        return "name: " + name + "Area> " + calcularArea() + "\n" + //
                 "Perimetro> " + calcularPerimetro();
     }
 
