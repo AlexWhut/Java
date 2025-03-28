@@ -15,8 +15,8 @@ public class Placa {
 
     public double calcularIntensidadTotal() {
         double intensidadTotal = 0;
-        for (Circuito circuito : circuitos) {
-            intensidadTotal += circuito.calcularIntensidad();
+        for (Circuito c : circuitos) {
+            intensidadTotal += c.calcularIntensidad();
         }
         return intensidadTotal;
     }
