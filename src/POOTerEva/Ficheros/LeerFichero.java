@@ -2,7 +2,7 @@ package POOTerEva.Ficheros;
 
 import java.io.*;
 
-public class CrearFichero {
+public class LeerFichero {
     public static void main(String[] args) {
     
         String ruta = "C:\\Users\\DAM2_Diurno\\Desktop\\Carpeta\\hola.txt";
