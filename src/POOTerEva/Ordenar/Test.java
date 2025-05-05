@@ -35,6 +35,8 @@ public class Test {
         for (Vuelo v : vuelos) {
             System.out.println(v);
         }
+
+        scanner.close();
     }
 }
 
