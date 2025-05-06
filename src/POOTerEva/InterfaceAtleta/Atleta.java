@@ -1,6 +1,10 @@
 package POOTerEva.InterfaceAtleta;
 
-public class Atleta implements Comparable<Atleta> {
+import java.io.Serializable;
+
+public class Atleta implements Comparable<Atleta>, Serializable {
+    private static final long serialVersionUID = 1L;
+    
     private String nombre;
     private double tiempo; // en segundos
     private int edad;
