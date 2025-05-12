@@ -9,3 +9,4 @@ public class ComparadorEdades implements Comparator<Atleta> {
     }
 }
 
+// este es el comparador de edades

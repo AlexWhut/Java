@@ -10,7 +10,7 @@ import java.util.*;
 public class Test {
     public static void main(String[] args) {
         // Convertir Array a List
-        List<Atleta> atletas = Arrays.asList(
+        List<Atleta> atletas = Arrays.asList( // inv asList
             new Atleta("Luis", 15.0, 22),
             new Atleta("Carlos", 12.0, 25),
             new Atleta("Ana", 10.0, 19),
@@ -18,11 +18,11 @@ public class Test {
         );
 
         // Ordenar por tiempo (con colecctions sort ya que pase de Array[] a List)
-        Collections.sort(atletas);
+        /* Collections.sort(atletas);
             System.out.println("== Atletas ordenados por tiempo ==");
         for (Atleta a : atletas) {
             System.out.println(a);
-        }
+        } */
 
         // Ordenar por edad (Comparator)
         Collections.sort(atletas, new ComparadorEdades());
@@ -54,7 +54,7 @@ public class Test {
         // Deserializar la lista
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("JavaSerializar/atletas.ser"))) {
             List<Atleta> atletasRecuperados = (List<Atleta>) ois.readObject();
-            System.out.println("\n== Atletas recuperados de atletas.ser ==");
+            System.out.println("\n//// Atletas recuperados de atletas.ser ////");
             for (Atleta a : atletasRecuperados) {
                 System.out.println(a);
             }
