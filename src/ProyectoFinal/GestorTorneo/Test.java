@@ -92,7 +92,7 @@ public class Test {
             List<Equipo> equipos = (List<Equipo>) ois.readObject();
             List<Torneo> torneos = (List<Torneo>) ois.readObject();
 
-            System.out.println("// Jugadores //");
+            System.out.println("\n// Jugadores //");
             for (Jugador j : jugadores) {
                 System.out.println(j);
             }
