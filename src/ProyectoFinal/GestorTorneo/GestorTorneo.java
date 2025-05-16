@@ -11,7 +11,7 @@ public class GestorTorneo {
 
     public void guardarDatos(String archivo) throws IOException {
     File file = new File(archivo);
-    file.getParentFile().mkdirs(); // crea los directorios si no existen
+    file.getParentFile().mkdirs();
 
     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
         oos.writeObject(jugadores);
