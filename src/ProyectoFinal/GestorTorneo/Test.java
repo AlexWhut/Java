@@ -76,7 +76,7 @@ public class Test {
 
         try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
             String linea;
-            System.out.println("=== Contenido de equipos.txt ===");
+            System.out.println("// Contenido de equipos.txt //");
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea);
             }
@@ -92,17 +92,17 @@ public class Test {
             List<Equipo> equipos = (List<Equipo>) ois.readObject();
             List<Torneo> torneos = (List<Torneo>) ois.readObject();
 
-            System.out.println("=== Jugadores ===");
+            System.out.println("// Jugadores //");
             for (Jugador j : jugadores) {
                 System.out.println(j);
             }
 
-            System.out.println("\n=== Equipos ===");
+            System.out.println("\n// Equipos //");
             for (Equipo e : equipos) {
                 System.out.println(e);
             }
 
-            System.out.println("\n=== Torneos ===");
+            System.out.println("\n// Torneos //");
             for (Torneo t : torneos) {
                 System.out.println(t);
             }
