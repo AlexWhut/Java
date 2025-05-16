@@ -10,18 +10,24 @@ public class Test {
             GestorTorneo gestor = new GestorTorneo();
 
             // Crear jugadores
-            Jugador j1 = new Jugador("J1", "Alex Torres", "Whut", "IGL", "Colombia");
+            Jugador j1 = new Jugador("J1", "Bryan Morantes", "Whut", "IGL", "Colombia");
             Jugador j2 = new Jugador("J2", "Luis Pérez", "Shadow", "Fragger", "España");
+            Jugador j3 = new Jugador("J3", "Camilo Torres", "Delete42", "Centinel", "España");
+            Jugador j4 = new Jugador("J4", "Laura Pinel", "MeHealing", "Support", "España");
 
             // Crear equipo
             Equipo e1 = new Equipo("Waku Esports", "Colombia", 2023);
             e1.addJugador(j1);
             e1.addJugador(j2);
+            e1.addJugador(j3);
+            e1.addJugador(j4);
 
             // Crear otro equipo
             Equipo e2 = new Equipo("FireWolf", "España", 2020);
-            e2.addJugador(new Jugador("J3", "Carlos", "Ghost", "Support", "España"));
-            e2.addJugador(new Jugador("J4", "Andrés", "SniperX", "Fragger", "España"));
+            e2.addJugador(new Jugador("J5", "Carlos", "Ghost", "Support", "España"));
+            e2.addJugador(new Jugador("J6", "Darly", "DowUp", "Fragger", "España"));
+            e2.addJugador(new Jugador("J7", "Jose", "Sinfallas", "Iniciator", "España"));
+            e2.addJugador(new Jugador("J8", "Mario", "SniperX", "Iniciador", "Rumano"));
 
             // Crear torneo tipo Liga
             TorneoLiga torneo = new TorneoLiga("Copa Valorant", "Valorant");
@@ -32,6 +38,8 @@ public class Test {
             // Agregar a las List
             gestor.getJugadores().add(j1);
             gestor.getJugadores().add(j2);
+            gestor.getJugadores().add(j3);
+            gestor.getJugadores().add(j4);
             gestor.getEquipos().add(e1);
             gestor.getEquipos().add(e2);
             gestor.getTorneos().add(torneo);
