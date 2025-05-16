@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
+
         try {
             GestorTorneo gestor = new GestorTorneo();
 
@@ -62,8 +63,6 @@ public class Test {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
 
         String ruta = "C:/Users/whutc/Desktop/torneo_esports/equipos.txt";
 
